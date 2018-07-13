@@ -1,6 +1,6 @@
 [package]
 name = "sgx-decode-pib"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Yu Ding <dingelish@gmail.com>"]
 build = "build.rs"
 repository = "https://github.com/dingelish/sgx-decode-pib-rs"
