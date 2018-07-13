@@ -100,7 +100,7 @@ impl fmt::Display for platform_info_blob {
         writeln!(f,"\n\tlatest_pse_isvsvn: {:02X}", self.latest_pse_isvsvn.iter().format(""))?;
         writeln!(f,"\n\tlatest_psda_svn: {:02X}", self.latest_psda_svn.iter().format(""))?;
         writeln!(f,"\n\txeid: {:08X}", u32::from_be(self.xeid))?;
-        writeln!(f,"\n\txgid: {:08X}", u32::from_be(self.gid))?;
+        writeln!(f,"\n\tgid: {:08X}", u32::from_be(self.gid))?;
         writeln!(f,"\n\tsignature:")?;
         writeln!(f,"\t\tgy: {:02X}", self.signature.gx.iter().format(""))?;
         writeln!(f,"\t\tgy: {:02X}", self.signature.gy.iter().format(""))?;
