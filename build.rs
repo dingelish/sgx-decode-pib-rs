@@ -28,11 +28,9 @@
 
 use std::env;
 
-fn main () {
+fn main() {
+    let sdk_dir = env::var("SGX_SDK").unwrap_or_else(|_| "/opt/intel/sgxsdk".to_string());
 
-    let sdk_dir = env::var("SGX_SDK")
-                    .unwrap_or_else(|_| "/opt/intel/sgxsdk".to_string());
-    
     println!("cargo:rustc-link-search=native={}/lib64", sdk_dir);
     println!("cargo:rustc-link-lib=dylib=sgx_urts");
     println!("cargo:rustc-link-lib=dylib=sgx_uae_service");
